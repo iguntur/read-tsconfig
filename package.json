@@ -1,0 +1,41 @@
+{
+	"name": "read-tsconfig",
+	"version": "1.0.0",
+	"description": "Read `tsconfig.json` file",
+	"repository": "iguntur/read-tsconfig",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run clean && tsc",
+		"build:release": "npm run test && npm run clean:dist",
+		"clean": "rm -rf dist",
+		"clean:dist": "rm -rf dist/*.test.*",
+		"test": "npm run build && ava"
+	},
+	"author": {
+		"name": "Guntur Poetra",
+		"email": "poetra.guntur@gmail.com",
+		"url": "https://github.com/iguntur"
+	},
+	"keywords": [
+		"config",
+		"read",
+		"tsconfig"
+	],
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+		"json5": "^2.1.0"
+	},
+	"devDependencies": {
+		"@guntur/tsconfig": "^1.0.0",
+		"@types/node": "^10.12.12",
+		"ava": "^1.0.0-rc.2",
+		"typescript": "^3.2.2"
+	}
+}

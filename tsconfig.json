@@ -1,0 +1,10 @@
+{
+	"extends": "@guntur/tsconfig",
+	"compilerOptions": { // 😎
+		"declaration": true,
+		"outDir": "dist",
+		"lib": [
+			"es2016",
+		],
+	},
+}
