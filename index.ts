@@ -20,7 +20,7 @@ function readTsconfig(options?: ReadOptions) {
 	});
 }
 
-readTsconfig.sync = function(options?: ReadOptions) {
+readTsconfig.sync = (options?: ReadOptions) => {
 	const opts = Object.assign({}, {cwd: process.cwd()}, options);
 
 	try {

@@ -10,6 +10,7 @@
 		"dist"
 	],
 	"scripts": {
+		"prepublishOnly": "npm run build:release",
 		"build": "npm run clean && tsc",
 		"build:release": "npm run test && npm run clean:dist",
 		"clean": "rm -rf dist",
@@ -22,9 +23,15 @@
 		"url": "https://github.com/iguntur"
 	},
 	"keywords": [
+		"browser",
 		"config",
+		"json",
+		"json5",
+		"node",
 		"read",
-		"tsconfig"
+		"ts",
+		"tsconfig",
+		"typescript"
 	],
 	"engines": {
 		"node": ">=6"
@@ -33,9 +40,9 @@
 		"json5": "^2.1.0"
 	},
 	"devDependencies": {
-		"@guntur/tsconfig": "^1.0.0",
-		"@types/node": "^10.12.12",
-		"ava": "^1.0.0-rc.2",
+		"@guntur/tsconfig": "^1.0.1",
+		"@types/node": "^10.12.18",
+		"ava": "^1.0.1",
 		"typescript": "^3.2.2"
 	}
 }

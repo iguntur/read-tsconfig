@@ -1,17 +1,13 @@
+import fs from 'fs';
+import path from 'path';
 import {tmpdir} from 'os';
 import test from 'ava';
+import * as json5 from 'json5';
 import read from '.';
 
-const expected = {
-	extends: '@guntur/tsconfig',
-	compilerOptions: {
-		declaration: true,
-		outDir: 'dist',
-		lib: [
-			'es2016'
-		]
-	}
-};
+const expected = json5.parse(
+	fs.readFileSync(path.resolve('.', 'tsconfig.json'), 'utf8')
+);
 
 test('async', async t => {
 	await t.throwsAsync(read({cwd: tmpdir()}));
